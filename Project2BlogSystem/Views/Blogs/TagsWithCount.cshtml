@@ -1,0 +1,12 @@
+﻿@model IEnumerable<string>
+@{
+    ViewBag.Title = "ListOfTags";
+}
+
+<h2>Tags With Count</h2>
+
+
+@foreach (var item in Model)
+{
+    <h3>@item.ToString()</h3>
+}

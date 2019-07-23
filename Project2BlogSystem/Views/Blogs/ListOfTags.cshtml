@@ -1,0 +1,13 @@
+﻿@model IEnumerable<string>
+@{
+    ViewBag.Title = "ListOfTags";
+}
+
+<h2>List Of Tags</h2>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@Html.ActionLink((string)item, "BlogsByTags", new { value = (string)item })</li>
+    }
+</ul>

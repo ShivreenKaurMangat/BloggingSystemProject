@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Project2BlogSystem.Models.Blog>
+
+@{
+    ViewBag.Title = "ShowByYear";
+}
+
+<h2>ShowByYear</h2>
+
+<ul>
+    @foreach (var year in ViewBag.Years)
+    {
+        <li>@Html.ActionLink((string)year, "year", new { value = (string)year})</li>
+    }
+</ul>
